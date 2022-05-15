@@ -1,6 +1,6 @@
 # Top Albums API
 
-This API allows you to view iTunes Top 100 albums data and store this data in a database. You are also able to add your own albums to the list, update indvidual album records, delete individual album records, and delete all records simultaneously. Album records can also be populated to the database and data refreshed using the `/refresh` endpoint. 
+This API allows you to view [iTunes Top 100 albums data](https://itunes.apple.com/us/rss/topalbums/limit=100/json "iTunes Top 100 albums data") and store this data in a database. You are also able to add your own albums to the list, update indvidual album records, delete individual album records, and delete all records simultaneously. Album records can also be populated to the database and data refreshed using the `/refresh` endpoint. 
 
 ### The following ***album parameters*** are included:
 
