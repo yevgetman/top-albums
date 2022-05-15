@@ -1,0 +1,23 @@
+### ignore cache files
+var/cache/
+
+### ignore DS_Store hidden file
+*DS_Store
+
+### ignore composer dependencies
+vendor
+
+node_modules
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/web-server-bundle ###
+/.web-server-pid
+###< symfony/web-server-bundle ###

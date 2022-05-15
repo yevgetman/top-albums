@@ -1,0 +1,51 @@
+
+# Frontend Routes
+
+get-key:
+  path: /
+  controller: App\Controller\Home::index
+  methods: GET
+
+# -----------------------------------------
+
+# API Routes 
+
+# public endpoints
+
+fetch-albums:
+  path: /fetch/{req}
+  controller: App\Controller\Albums::fetch
+  methods: GET
+  defaults:  { req: null }
+  requirements:
+    req: ".+"
+
+generate-key:
+  path: /get-key
+  controller: App\Controller\Albums::generate_key
+  methods: POST
+
+
+# gated endpoints
+
+add-album:
+  path: /add
+  controller: App\Controller\Albums::add
+  methods: POST
+
+update-album:
+  path: /{album_id}
+  controller: App\Controller\Albums::update
+  methods: POST
+  defaults:  { album_id: null }
+
+delete-album:
+  path: /{album_id}
+  controller: App\Controller\Albums::delete
+  methods: DELETE
+  defaults:  { album_id: null }
+
+refresh-albums:
+  path: /refresh
+  controller: App\Controller\Albums::refresh
+  methods: GET

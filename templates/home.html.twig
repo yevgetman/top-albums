@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+{% block view %}
+
+    <style type="text/css">
+        .key-wrap,
+        .error {
+            display: none;
+        }
+        .error {
+            font-size: 20px;
+        }
+        .key-wrap .key {
+            font-size: 30px;
+        }
+    </style>
+        
+    <div class="content my30">
+        
+        <button id="get-key" class="btn">Genereate API key</button>
+
+        <div class="key-wrap px5 py30">
+            <h5>Your API key:</h5>
+            <div class="key mtop10" >&nsbp;</div>
+        </div>
+
+        <div class="error px7 py30">&nbsp;</div>
+
+    </div>
+
+    <script type="text/javascript" >
+
+        document.getElementById('get-key').addEventListener('click',function(){
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', '/get-key', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+            xhr.onload = function() {
+
+              if(this.status >= 200) {
+                
+                const resp = JSON.parse(this.response);
+
+                if(resp.response.status < 0){
+
+                    document.querySelector('.error').innerHTML = resp.response.error[0];
+                    document.querySelector('.error').style.display = 'block';
+
+                } else { // succcess
+
+                    document.querySelector('.key-wrap .key').innerHTML = resp.data.key;
+                    document.querySelector('.key-wrap').style.display = 'block';
+                }
+
+                setTimeout(function(){
+                    document.querySelector('.key-wrap').style.display = 'none';
+                },10000);
+              
+              }
+
+            };            
+            xhr.send();
+        });
+
+    </script>
+
+{% endblock %}

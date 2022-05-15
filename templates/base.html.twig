@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="fragment" content="!">
+        <title>Top Albums</title>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no, width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <base href="/">
+
+    	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700,600,300" />
+
+        {% block stylesheets %}
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+        {% endblock %}
+
+    </head>
+    <body class="dark clearfix" >
+    	<div class="wrapper" >
+            {% block view %}{% endblock %}
+    	</div>
+    </body>
+</html>
