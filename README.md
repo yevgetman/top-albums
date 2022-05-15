@@ -25,7 +25,7 @@ This API allows you to view [iTunes Top 100 albums data](https://itunes.apple.co
 ## ## The following endpoints are available publically:
 
 #### Search and return top album data
-**GET**`/fetch`
+**GET** `/fetch`
 
 URL slugs after `/fetch/` will be interpreted as columns to be selected. 
 
@@ -50,7 +50,7 @@ API key must be included in your request as a URL parameter`api_key`
 ex. `/foo?api_key=[your_api_key]`
 
 ## Add a new album record
-**POST**`/add`
+**POST** `/add`
 
 Content-Type: `application/x-www-form-urlencoded`
 
@@ -60,7 +60,7 @@ Parameter other than valid  ***album parameters*** will be ignored.
 
 
 ## Update an album record
-**POST**`/[album_id]`
+**POST** `/[album_id]`
 
 *album_id* - a valid album identifier
 
@@ -70,7 +70,7 @@ Parameter other than valid  ***album parameters*** will be ignored.
 
 
 ## Delete a specific album record
-**DELETE**`/[album_id]`
+**DELETE** `/[album_id]`
 
 *album_id* - a valid album identifier
 
@@ -78,12 +78,12 @@ Ex: `/[album_id]?api_key=[your_api_key]`
 
 
 ## Delete all album records
-**DELETE**`/`
+**DELETE** `/`
 
 Ex: `/?api_key=[your_api_key]`
 
 
 ## Refresh album data from iTunes Top 100 endpoint
-**GET**`/refresh`
+**GET** `/refresh`
 
 Ex: `/refresh?api_key=[your_api_key]`
