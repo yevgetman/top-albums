@@ -22,7 +22,7 @@ This API allows you to view [iTunes Top 100 albums data](https://itunes.apple.co
 
 **album_id** - a unique identified associated with the album
 
-## The following endpoints are available publically:
+## ## The following endpoints are available publically:
 
 #### Search and return top album data
 **GET**`/fetch`
@@ -41,7 +41,7 @@ Select `name`, `artist`, `image`, & `releaseDate` where artist = "Nirvana"
 
 Request: **GET**`/fetch/name/artist/image?artist=nirvana`
 
-## The following endpoints require an API key:
+## ## The following endpoints require an API key:
 
 An API key can be generated here: [https://weecare-top-albums.herokuapp.com/](https://weecare-top-albums.herokuapp.com/ "https://weecare-top-albums.herokuapp.com/")
 
@@ -49,7 +49,7 @@ API key must be included in your request as a URL parameter`api_key`
 
 ex. `/foo?api_key=[your_api_key]`
 
-#### Add a new album record
+## Add a new album record
 **POST**`/add`
 
 Content-Type: `application/x-www-form-urlencoded`
@@ -59,7 +59,7 @@ Content-Type: `application/x-www-form-urlencoded`
 Parameter other than valid  ***album parameters*** will be ignored.
 
 
-#### Update an album record
+## Update an album record
 **POST**`/[album_id]`
 
 *album_id* - a valid album identifier
@@ -69,7 +69,7 @@ Content-Type: `application/x-www-form-urlencoded`
 Parameter other than valid  ***album parameters*** will be ignored.
 
 
-#### Delete a specific album record
+## Delete a specific album record
 **DELETE**`/[album_id]`
 
 *album_id* - a valid album identifier
@@ -77,13 +77,13 @@ Parameter other than valid  ***album parameters*** will be ignored.
 Ex: `/[album_id]?api_key=[your_api_key]`
 
 
-#### Delete all album records
+## Delete all album records
 **DELETE**`/`
 
 Ex: `/?api_key=[your_api_key]`
 
 
-#### Refresh album data from iTunes Top 100 endpoint
+## Refresh album data from iTunes Top 100 endpoint
 **GET**`/refresh`
 
 Ex: `/refresh?api_key=[your_api_key]`
