@@ -31,15 +31,19 @@ URL slugs after `/fetch/` will be interpreted as columns to be selected.
 
 URL parameter keys and values will be interpreted as sql `WHERE` clause.
 
-**Examples:**
+### **Examples:**
 
-Select `name`, `artist`, and `image` for all records
+**Show all records:**
 
-Request: **GET**`/fetch/name/artist/image`
+**GET**`/fetch`
 
-Select `name`, `artist`, `image`, & `releaseDate` where artist = "Nirvana" 
+**Select `name`, `artist`, and `image` for all records:**
 
-Request: **GET**`/fetch/name/artist/image?artist=nirvana`
+**GET**`/fetch/name/artist/image`
+
+**Select `name`, `artist`, `image`, & `releaseDate` where artist = "Nirvana":**
+
+ **GET**`/fetch/name/artist/image?artist=nirvana`
 
 ## ## The following endpoints require an API key:
 
@@ -84,6 +88,9 @@ Ex: `/?api_key=[your_api_key]`
 
 
 ## Refresh album data from iTunes Top 100 endpoint
+
+This endpoint will populate the database using data from [iTunes Top 100 albums](https://itunes.apple.com/us/rss/topalbums/limit=100/json "iTunes Top 100 albums"). If a particular record already exists, the  ***album parameters*** for that record will be updated to the latest version.
+
 **GET** `/refresh`
 
 Ex: `/refresh?api_key=[your_api_key]`
