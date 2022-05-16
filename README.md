@@ -41,15 +41,15 @@ URL parameter keys and values will be interpreted as sql `WHERE` clause.
 
 **GET**`/fetch/name/artist/image`
 
-**Select `name`, `artist`, `image`, & `releaseDate` where artist = "Nirvana":**
+**Select `name`, `artist`, `image`, & `releaseDate` where artist = "The Rolling Stones":**
 
- **GET**`/fetch/name/artist/image?artist=nirvana`
+ **GET**`/fetch/name/artist/image?artist=The Rolling Stones`
 
 ## ## The following endpoints require an API key:
 
 An API key can be generated here: [https://weecare-top-albums.herokuapp.com/](https://weecare-top-albums.herokuapp.com/ "https://weecare-top-albums.herokuapp.com/")
 
-API key must be included in your request as a URL parameter`api_key`
+API key must be included in your request as a URL parameter `api_key`
 
 ex. `/foo?api_key=[your_api_key]`
 
