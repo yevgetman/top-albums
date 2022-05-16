@@ -22,7 +22,7 @@ This API allows you to view [iTunes Top 100 albums data](https://itunes.apple.co
 
 **album_id** - a unique identified associated with the album
 
-## ## The following endpoints are available publically:
+## ## The following endpoints are available publicly:
 
 #### Search and return top album data
 **GET** `/fetch`
